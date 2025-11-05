@@ -107,8 +107,6 @@ public class BinarySearchTreeDemo {
 			postorderRec(root);
 			System.out.println();
 		}
-
-		// ---------- Eliminar ----------
 		private TreeNode findMin(TreeNode node) {
 			while (node.left != null) {
 				node = node.left;
@@ -124,7 +122,6 @@ public class BinarySearchTreeDemo {
 			} else if (value > root.value) {
 				root.right = deleteRec(root.right, value);
 			} else {
-				// Nodo encontrado
 				if (root.left == null) {
 					return root.right;
 				} else if (root.right == null) {
@@ -168,3 +165,4 @@ public class BinarySearchTreeDemo {
 		tree.inorder();
 	}
 }
+
