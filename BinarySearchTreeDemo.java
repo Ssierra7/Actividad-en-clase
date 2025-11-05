@@ -127,8 +127,6 @@ public class BinarySearchTreeDemo {
 				} else if (root.right == null) {
 					return root.left;
 				}
-
-				// Nodo con dos hijos: obtener el sucesor (mínimo del subárbol derecho)
 				TreeNode temp = findMin(root.right);
 				root.value = temp.value;
 				root.right = deleteRec(root.right, temp.value);
@@ -165,4 +163,5 @@ public class BinarySearchTreeDemo {
 		tree.inorder();
 	}
 }
+
 
